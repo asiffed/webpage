@@ -4,24 +4,16 @@
     <title>My first webpage</title>
     <link rel="shortcut icon" href="images/lightbulb1.png">
     <style>
-        img {
-            border-radius: 50%;
-
+        .footer-image {
             border: 1px solid #ddd;
             border-radius: 4px;
             padding: 5px;
             width: 150px;
-
         }
 
         .container {
             position: relative;
-            width: 50%;
-        }
-
-        .image {
-            display: block;
-
+            width: 162px;
             height: auto;
         }
 
@@ -40,9 +32,17 @@
         .container:hover .overlay {
             bottom: 0;
             height: 100%;
+            z-index: 25;
+        }
+
+        .container:hover .text {
+            transition: opacity 1s;
+            opacity: 1;
+            z-index: 26;
         }
 
         .text {
+            opacity: 0;
             color: white;
             font-size: 20px;
             position: absolute;
@@ -51,6 +51,7 @@
             transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             text-align: center;
+            z-index: -1;
         }
     </style>
 </head>
@@ -88,37 +89,38 @@
 </body>
 <footer>
     <div>
-        <img src="images/asif.JPG" alt="Asif">
+        <img class="footer-image" src="images/asif.JPG" alt="Asif">
         <span>Acting FED </span>
     </div>
     <div>
-        <img src="images/sm.JPG" alt="Jeff">
+        <img class="footer-image" src="images/sm.JPG" alt="Jeff">
         <span>SM - Best web site ever!!!</span>
     </div>
     <div>
-        <img src="images/kirk.jpeg" alt="kirk">
+        <img class="footer-image" src="images/kirk.jpeg" alt="kirk">
         <span>Data Scientist - Awesome job</span>
     </div>
     <div>
-        <img src="images/john.JPG" alt="John">
+        <img class="footer-image" src="images/john.JPG" alt="John">
         <span>QA Lead - Good job Keep it up!!!</span>
     </div>
     <div>
-        <img src="images/james.JPG" alt="James">
+        <img class="footer-image" src="images/james.JPG" alt="James">
         <span>James J- I am impressed!!!</span>
     </div>
     <div>
-        <img src="images/steve.JPG" alt="Steve">
+        <img class="footer-image" src="images/steve.JPG" alt="Steve">
         <span>Steve - WoW , please help me</span>
     </div>
     <div>
-        <img src="images/rousey.png" alt="Rousey">
+        <img class="footer-image" src="images/rousey.png" alt="Rousey">
         <span>Rousey - WoW , the best FED</span>
     </div>
     <div class="container">
-        <img src="images/sparkles.JPG" alt="Rousey" class="image">
+        <img class="footer-image" src="images/sparkles.JPG" alt="Rousey">
         <div class="overlay"></div>
-        <div class="text">Sparkles- Did you read your git tutorial</div>
+        <div class="text">Sparkles - "Did you read the git tutorial?"</div>
+        <!-- Git Tutorial in question: https://git-scm.com/docs/gittutorial -->
     </div>
 </footer>
 
