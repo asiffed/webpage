@@ -4,16 +4,24 @@
     <title>My first webpage</title>
     <link rel="shortcut icon" href="images/lightbulb1.png">
     <style>
-        .footer-image {
+        img {
+            border-radius: 50%;
+
             border: 1px solid #ddd;
             border-radius: 4px;
             padding: 5px;
             width: 150px;
+
         }
 
         .container {
             position: relative;
-            width: 162px;
+            width: 50%;
+        }
+
+        .image {
+            display: block;
+
             height: auto;
         }
 
@@ -32,17 +40,9 @@
         .container:hover .overlay {
             bottom: 0;
             height: 100%;
-            z-index: 25;
-        }
-
-        .container:hover .text {
-            transition: opacity 1s;
-            opacity: 1;
-            z-index: 26;
         }
 
         .text {
-            opacity: 0;
             color: white;
             font-size: 20px;
             position: absolute;
@@ -51,12 +51,12 @@
             transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             text-align: center;
-            z-index: -1;
         }
     </style>
 </head>
 
 <body>
+    <!--<p>I should not be displayed</p>-->
     <header>
         <h1>Asif's world</h1>
     </header>
@@ -73,13 +73,13 @@
             <li>
                 <p>SF city trip</p>
                 <div>
-                    <img src="images/SF.jpg" style="width:700px;height:600px">
+                    <img src="images/SF.jpg" style="width:700px;height:600px" alt="SF city image">
                 </div>
             </li>
             <li>
                 <p>California Landscape</p>
                 <div>
-                    <img src="images/california.png" style="width:700px;height:600px">
+                    <img src="images/california.png" style="width:700px;height:600px" alt="California Landscape">
                 </div>
             </li>
         </ul>
@@ -89,38 +89,37 @@
 </body>
 <footer>
     <div>
-        <img class="footer-image" src="images/asif.JPG" alt="Asif">
+        <img src="images/asif.JPG" alt="Asif">
         <span>Acting FED </span>
     </div>
     <div>
-        <img class="footer-image" src="images/sm.JPG" alt="Jeff">
+        <img src="images/sm.JPG" alt="Jeff">
         <span>SM - Best web site ever!!!</span>
     </div>
     <div>
-        <img class="footer-image" src="images/kirk.jpeg" alt="kirk">
+        <img src="images/kirk.jpeg" alt="kirk">
         <span>Data Scientist - Awesome job</span>
     </div>
     <div>
-        <img class="footer-image" src="images/john.JPG" alt="John">
+        <img src="images/john.JPG" alt="John">
         <span>QA Lead - Good job Keep it up!!!</span>
     </div>
     <div>
-        <img class="footer-image" src="images/james.JPG" alt="James">
+        <img src="images/james.JPG" alt="James">
         <span>James J- I am impressed!!!</span>
     </div>
     <div>
-        <img class="footer-image" src="images/steve.JPG" alt="Steve">
+        <img src="images/steve.JPG" alt="Steve">
         <span>Steve - WoW , please help me</span>
     </div>
     <div>
-        <img class="footer-image" src="images/rousey.png" alt="Rousey">
+        <img src="images/rousey.png" alt="Rousey">
         <span>Rousey - WoW , the best FED</span>
     </div>
     <div class="container">
-        <img class="footer-image" src="images/sparkles.JPG" alt="Rousey">
+        <img src="images/sparkles.JPG" alt="Rousey" class="image">
         <div class="overlay"></div>
-        <div class="text">Sparkles - "Did you read the git tutorial?"</div>
-        <!-- Git Tutorial in question: https://git-scm.com/docs/gittutorial -->
+        <div class="text">Sparkles- Did you read your git tutorial</div>
     </div>
 </footer>
 
